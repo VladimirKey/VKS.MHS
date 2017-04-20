@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VKS.MHS.Elements", "VKS.MHS.Elements\VKS.MHS.Elements.csproj", "{0FF1F12F-C233-4CE1-86B4-34F39EE12867}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FF1F12F-C233-4CE1-86B4-34F39EE12867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF1F12F-C233-4CE1-86B4-34F39EE12867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF1F12F-C233-4CE1-86B4-34F39EE12867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF1F12F-C233-4CE1-86B4-34F39EE12867}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.VersionControlPolicy = $1
+		$1.CommitMessageStyle = $2
+		$2.Indent = @\t
+		$2.LastFilePostfix = "@:\n  "
+		$1.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal
