@@ -30,5 +30,13 @@ namespace VKS.MHS.Elements
 		/// </summary>
 		/// <value><c>true</c> if element is faulty; otherwise, <c>false</c>.</value>
 		bool Faulty { get; }
+
+        /// <summary>
+        /// Gets or sets the location of element within network.
+        /// </summary>
+        /// <value>
+        /// The location of element.
+        /// </value>
+        string Location { get; set; }
 	}
 }

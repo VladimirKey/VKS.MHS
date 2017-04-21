@@ -25,5 +25,29 @@ namespace VKS.MHS.Elements
 		/// </summary>
 		/// <value>The brightness of light source.</value>
 		double Brightness { get; set; }
+
+        /// <summary>
+        /// Gets the maximum power of light source in Watts or return <c>null</c> if this parameter is undefined.
+        /// </summary>
+        /// <value>
+        /// The maximum power in Watts.
+        /// </value>
+        double? MaxPower { get; }
+
+        /// <summary>
+        /// Gets the maximum light intensity of light source in Lumens or return <c>null</c> if this parameter is undefined.
+        /// </summary>
+        /// <value>
+        /// The maximum intensity in lumens.
+        /// </value>
+        double? MaxIntensity { get; }
+
+        /// <summary>
+        /// Gets the maximum luminosity of light source in candelas or return <c>null</c> if this parameter is undefined.
+        /// </summary>
+        /// <value>
+        /// The maximum luminosity in candelas.
+        /// </value>
+        double? MaxLuminosity { get; }
 	}
 }
