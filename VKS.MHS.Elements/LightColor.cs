@@ -63,6 +63,13 @@ namespace VKS.MHS.Elements
         /// <param name="B">The brightness component in interval [0, 1].</param>
         void SetRGBFromHSB(double H, double S, double B)
         {
+            if ((H < 0) || (H > 360))
+                throw new ArgumentOutOfRangeException("H");
+            if ((S < 0) || (S > 1))
+                throw new ArgumentOutOfRangeException("S");
+            if ((B < 0) || (B > 1))
+                throw new ArgumentOutOfRangeException("B");
+
             var _Chroma = B * S;
 
             var _HueSector = H / 60;
