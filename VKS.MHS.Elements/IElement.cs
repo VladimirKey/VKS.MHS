@@ -38,5 +38,15 @@ namespace VKS.MHS.Elements
         /// The location of element.
         /// </value>
         string Location { get; set; }
+
+		/// <summary>
+		/// Initializes this instance.
+		/// </summary>
+		void Init();
+
+		/// <summary>
+		/// Shutdowns this instance.
+		/// </summary>
+		void Shutdown();
 	}
 }
