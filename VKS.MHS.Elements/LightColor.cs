@@ -64,11 +64,11 @@ namespace VKS.MHS.Elements
         void SetRGBFromHSB(double H, double S, double B)
         {
             if ((H < 0) || (H > 360))
-                throw new ArgumentOutOfRangeException("H");
+				throw new ArgumentOutOfRangeException(nameof(H));
             if ((S < 0) || (S > 1))
-                throw new ArgumentOutOfRangeException("S");
+				throw new ArgumentOutOfRangeException(nameof(S));
             if ((B < 0) || (B > 1))
-                throw new ArgumentOutOfRangeException("B");
+				throw new ArgumentOutOfRangeException(nameof(B));
 
             var _Chroma = B * S;
 
@@ -130,16 +130,16 @@ namespace VKS.MHS.Elements
         {
             get
             {
-                if ((FMax == FRed) && (FGreen >= FBlue))
+                if ((Math.Abs(FMax - FRed) < double.Epsilon) && (FGreen >= FBlue))
                     return 60 * ((FGreen - FBlue) / (FMax - FMin));
 
-                if ((FMax == FRed) && (FGreen < FBlue))
+				if ((Math.Abs(FMax - FRed) < double.Epsilon) && (FGreen < FBlue))
                     return 60 * ((FGreen - FBlue) / (FMax - FMin)) + 360;
 
-                if (FMax == FGreen)
+				if (Math.Abs(FMax - FGreen) < double.Epsilon)
                     return 60 * ((FBlue - FRed) / (FMax - FMin)) + 120;
 
-                if (FMax == FBlue)
+				if (Math.Abs(FMax - FBlue) < double.Epsilon)
                     return 60 * ((FRed - FGreen) / (FMax - FMin)) + 240;
 
                 return 0;
@@ -179,7 +179,7 @@ namespace VKS.MHS.Elements
         {
             get
             {
-                return FMax != 0 ? (1 - FMin / FMax) : 0;
+				return (Math.Abs(FMax) > double.Epsilon) ? (1 - FMin / FMax) : 0;
             }
             set
             {
