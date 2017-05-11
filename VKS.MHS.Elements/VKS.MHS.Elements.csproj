@@ -44,6 +44,7 @@
     <Compile Include="IEnvironmentSensor.cs" />
     <Compile Include="SensorData.TimerData.cs" />
     <Compile Include="ITimer.cs" />
+    <Compile Include="TimerSchedule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
