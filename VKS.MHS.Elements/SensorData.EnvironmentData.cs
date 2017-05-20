@@ -58,6 +58,12 @@ namespace VKS.MHS.Elements
 		public double? RainGauge { get; set; }
 
 		/// <summary>
+		/// Gets or sets the soil moisture level.
+		/// </summary>
+		/// <value>The soil moisture level in percents.</value>
+		public double? SoilMoisture { get; set; }
+
+		/// <summary>
 		/// Convert sensor data value to a formattable string.
 		/// Possible format strings are:
 		/// <list type="unordered">

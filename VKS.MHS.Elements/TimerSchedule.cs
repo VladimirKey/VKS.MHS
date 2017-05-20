@@ -116,6 +116,49 @@ namespace VKS.MHS.Elements
         /// </value>
         public bool Active { get; set; }
 
-        //TODO: Write schedule logic for different cases.
+		/// <summary>
+		/// Gets or sets the start time of schedule.
+		/// </summary>
+		/// <value>The start time.</value>
+		public DateTimeOffset? StartTime { get; set; }
+
+		/// <summary>
+		/// Gets or sets the end time of schedule.
+		/// </summary>
+		/// <value>The end time.</value>
+		public DateTimeOffset? EndTime { get; set; }
+
+		/// <summary>
+		/// Gets or sets the active days of week for schedule.
+		/// </summary>
+		/// <value>The active days of week.</value>
+		public IDictionary<DayOfWeek, bool?> ActiveDaysOfWeek { get; set; }
+
+		/// <summary>
+		/// Gets or sets the period for periodical schedules.
+		/// I.e. every {Period} months, every {Period} weeks etc.
+		/// </summary>
+		/// <value>The period.</value>
+		public uint? Period { get; set; }
+
+		/// <summary>
+		/// Gets or sets the day of month for monthly-based schedules
+		/// Minimal: 1, Maximal: 31 (automatically set to 30/29/28 based on month length.
+		/// </summary>
+		/// <value>The day of month.</value>
+		public uint? DayOfMonth { get; set; }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:VKS.MHS.Elements.TimerSchedule"/> class.
+		/// </summary>
+		internal TimerSchedule()
+		{
+			StartTime = null;
+			EndTime = null;
+			ActiveDaysOfWeek = Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>()
+								   .ToDictionary(x => x, y => (bool?)null);
+			DayOfMonth = null;
+			Period = null;
+		}
     }
 }
