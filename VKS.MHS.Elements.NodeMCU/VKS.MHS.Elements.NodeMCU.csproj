@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E352BEB0-E97E-44F5-BF5B-1F5B4C6E106F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VKS.MHS.Elements.NodeMCU</RootNamespace>
+    <AssemblyName>VKS.MHS.Elements.NodeMCU</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NodeElement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NodeManager.cs" />
+    <Compile Include="EnvironmentSensorNode.cs" />
+    <Compile Include="Datagrams\NodeDatagram.cs" />
+    <Compile Include="DatagramAttrubute.cs" />
+    <Compile Include="Datagrams\ScanDatagram.cs" />
+    <Compile Include="Datagrams\DiscoveredDatagram.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VKS.MHS.Elements\VKS.MHS.Elements.csproj">
+      <Project>{0FF1F12F-C233-4CE1-86B4-34F39EE12867}</Project>
+      <Name>VKS.MHS.Elements</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="example.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Datagrams\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,16 @@
+﻿{
+	"datagram": {
+		"version": 1.0,
+		"hash": "",
+		"id": "c682029b-ef28-45a5-9a50-b96d9043df32",
+		"ip": "192.168.1.34",
+		"port": 54045,
+		"classId": "sensor::environment",
+		"enabled": "true",
+		"faulty": "false",
+		"faultMessage": null,
+		"faultCode": 0,
+		"location": "",
+        "commandId": "1ff0edd4-64e3-452e-8f60-18d5d0682a07"
+	}
+}

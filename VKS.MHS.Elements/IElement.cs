@@ -40,6 +40,18 @@ namespace VKS.MHS.Elements
         string Location { get; set; }
 
 		/// <summary>
+		/// Gets the battery level in percents.
+		/// </summary>
+		/// <value>The battery level in percents.
+		/// <list type="unordered">
+		/// <item><c>  0 %</c> - for discharged battery,</item>
+		/// <item><c>100 %</c> - for fully charged battery,</item>
+		/// <item><c> null</c> - for devices without batteries / autonomous capabilities.</item>
+		/// </list>
+		/// </value>
+		double? BatteryLevel { get; }
+
+		/// <summary>
 		/// Initializes this instance.
 		/// </summary>
 		void Init();
